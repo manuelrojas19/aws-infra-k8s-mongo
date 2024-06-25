@@ -73,6 +73,13 @@ The configuration is managed through the `variables.tf` file. Key parameters inc
 - **Node Instance Type**: The instance type for the worker nodes.
 - **MongoDB Configuration**: Parameters for MongoDB deployment, such as instance size and backup settings.
 
+## TODO
+
+- CI/CD Integration
+- EKS Cluster SSL/TLS Configuration
+- Kafka Integration
+
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

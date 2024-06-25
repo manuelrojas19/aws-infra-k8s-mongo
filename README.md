@@ -43,8 +43,8 @@ This project is designed to simplify the deployment of an EKS cluster and a Mong
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-repo/aws-eks-mongodb-infrastructure.git
-    cd aws-eks-mongodb-infrastructure
+    git clone https://github.com/manuelrojas19/aws-infra-k8s-mongo
+    cd aws-infra-k8s-mongo/terrafom
     ```
 
 2. **Initialize Terraform**:

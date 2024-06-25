@@ -38,6 +38,7 @@ This project is designed to simplify the deployment of an EKS cluster and a Mong
 - **Terraform**: [Install Terraform](https://www.terraform.io/downloads.html).
 - **AWS Account**: An AWS account with appropriate permissions to create resources.
 - **AWS CLI**: [Install and configure AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) with your AWS credentials.
+- **MongoDB Self Signed Certificates**: [Create x.509 Certificates](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html): for MongoDB.
 
 ## Usage
 

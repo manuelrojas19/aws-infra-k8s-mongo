@@ -93,6 +93,8 @@ Combine the key and certificate into a PEM file:
 cat mongo.key mongo.crt > mongo.pem
 ```
 
+The resulting PEM file can be used for securing communication in applications like MongoDB, which require both the private key and the certificate in a single file.
+
 ## Concepts and Use Cases
 
 ### Concepts

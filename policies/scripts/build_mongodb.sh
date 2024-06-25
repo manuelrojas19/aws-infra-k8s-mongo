@@ -244,7 +244,7 @@ EOF
     echo "------------------------------------------"
 
     sudo /usr/local/bin/aws s3 cp s3://$CERT_S3_BUCKET/mongo-init.js .
-    sudo mongosh admin --tls --tlsCAFile /etc/mongodb/ssl/mongoCA.crt --tlsCertificateKeyFile /etc/mongodb/ssl/mongo.pem -u admin -p password --host mongodb.node1.mrr.com <<EOF
+    sudo mongosh admin --tls --tlsCAFile /etc/mongodb/ssl/mongoCA.crt --tlsCertificateKeyFile /etc/mongodb/ssl/mongo.pem -u $MONGO_USER  -p $MONGO_USER  --host mongodb.node1.mrr.com <<EOF
     
     use atm_data_db;
 

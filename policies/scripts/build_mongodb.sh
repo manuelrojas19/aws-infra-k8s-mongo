@@ -237,45 +237,7 @@ if [[ $TAG_NAME == *"mongodb-node-1"* ]]; then
     })
 EOF
 
-    # Adding initial data
-
-    echo "------------------------------------------"
-    echo "MongoDB Onboarding initial data."
-    echo "------------------------------------------"
-
-    sudo /usr/local/bin/aws s3 cp s3://$CERT_S3_BUCKET/mongo-init.js .
-    sudo mongosh admin --tls --tlsCAFile /etc/mongodb/ssl/mongoCA.crt --tlsCertificateKeyFile /etc/mongodb/ssl/mongo.pem -u $MONGO_USER  -p $MONGO_USER  --host mongodb.node1.mrr.com <<EOF
-    
-    use atm_data_db;
-
-    load("mongo-init.js");
-
-    use atm_data_db;
-
-    db.createUser(
-    {
-        user: "mongo",
-        pwd: "mongo", 
-        roles: [ { role: "atm", db: "atm_data_db" }]
-      }
-    );
-
-    db.createRole({
-      role: "atm",
-      privileges: [
-          {
-            resource: { db: "atm_data_db", collection: "bankEntity" },
-            actions: ["find"]
-          }
-      ],
-      roles: []
-    });
-    
-EOF
-
-    echo "------------------------------------------"
-    echo "MongoDB Iniitial data was onboarded."
-    echo "------------------------------------------"
+    sudo mongosh admin --tls --tlsCAFile /etc/mongodb/ssl/mongoCA.crt --tlsCertificateKeyFile /etc/mongodb/ssl/mongo.pem -u $MONGO_USER  -p $MONGO_USER  --host mongodb.node1.mrr.com 
 
 elif [[ $TAG_NAME == *"mongodb-node-2"* ]]; then
     # Set hostname for mongodb-2

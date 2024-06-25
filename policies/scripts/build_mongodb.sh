@@ -237,8 +237,6 @@ if [[ $TAG_NAME == *"mongodb-node-1"* ]]; then
     })
 EOF
 
-    sudo mongosh admin --tls --tlsCAFile /etc/mongodb/ssl/mongoCA.crt --tlsCertificateKeyFile /etc/mongodb/ssl/mongo.pem -u $MONGO_USER  -p $MONGO_USER  --host mongodb.node1.mrr.com 
-
 elif [[ $TAG_NAME == *"mongodb-node-2"* ]]; then
     # Set hostname for mongodb-2
     sleep 220
